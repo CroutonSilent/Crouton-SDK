@@ -10,7 +10,7 @@ public:
 	bool remove_config(std::string file_name);
 	void create_config(std::string name);
 	std::vector<std::string> get_configs();
-	
+
 
 };
 

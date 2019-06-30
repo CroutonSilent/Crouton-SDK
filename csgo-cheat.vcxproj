@@ -82,6 +82,10 @@
     <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
@@ -130,9 +134,6 @@
   <ItemGroup>
     <ClCompile Include="core\features\config\config.cpp" />
     <ClCompile Include="core\hooks\hooks.cpp" />
-    <ClCompile Include="core\menu\imgui\dx9\imgui_impl_dx9.cpp" />
-    <ClCompile Include="core\menu\imgui\imgui.cpp" />
-    <ClCompile Include="core\menu\imgui\imgui_draw.cpp" />
     <ClCompile Include="core\menu\menu.cpp" />
     <ClCompile Include="dependencies\interfaces\interfaces.cpp" />
     <ClCompile Include="dependencies\utilities\netvars.cpp" />
@@ -145,13 +146,6 @@
   <ItemGroup>
     <ClInclude Include="core\features\config\config.hpp" />
     <ClInclude Include="core\hooks\hooks.hpp" />
-    <ClInclude Include="core\menu\imgui\dx9\imgui_impl_dx9.h" />
-    <ClInclude Include="core\menu\imgui\imconfig.h" />
-    <ClInclude Include="core\menu\imgui\imgui.h" />
-    <ClInclude Include="core\menu\imgui\imgui_internal.h" />
-    <ClInclude Include="core\menu\imgui\stb_rect_pack.h" />
-    <ClInclude Include="core\menu\imgui\stb_textedit.h" />
-    <ClInclude Include="core\menu\imgui\stb_truetype.h" />
     <ClInclude Include="core\menu\menu.hpp" />
     <ClInclude Include="dependencies\common_includes.hpp" />
     <ClInclude Include="dependencies\interfaces\cglobalvarsbase.hpp" />

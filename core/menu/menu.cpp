@@ -1,11 +1,10 @@
 #include "menu.hpp"
-#include "imgui/imgui.h"
-#include "imgui/imgui_internal.h"
 #include <sstream>
 
 menu::menu(void)
 {
-
+	m_elements.push_back(new boolea("watermark", "msc_watermark"));
+	//m_elements.push_back(new boolea("box esp", "visuals_boxesp"));
 }
 
 float menu::_get(std::string var)
